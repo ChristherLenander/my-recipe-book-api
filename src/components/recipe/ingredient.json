@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_recipe_ingredients",
+  "info": {
+    "displayName": "Ingredient",
+    "icon": "list-ul"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "enumeration",
+      "enum": [
+        "ST",
+        "TSK",
+        "MSK",
+        "DL",
+        "ML",
+        "L"
+      ]
+    }
+  }
+}

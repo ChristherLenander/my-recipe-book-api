@@ -4,7 +4,8 @@
   "info": {
     "singularName": "recipe",
     "pluralName": "recipes",
-    "displayName": "Recipe"
+    "displayName": "Recipe",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,24 +15,32 @@
     "title": {
       "type": "string"
     },
-    "ingredients": {
-      "type": "richtext"
-    },
-    "instructions": {
+    "description": {
       "type": "richtext"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "recipes"
+    },
+    "ingredients": {
+      "type": "component",
+      "repeatable": true,
+      "component": "recipe.ingredient"
+    },
+    "instructions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "recipe.instruction"
     }
   }
 }

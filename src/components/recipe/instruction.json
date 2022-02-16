@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_recipe_instructions",
+  "info": {
+    "displayName": "Instruction",
+    "icon": "check-square"
+  },
+  "options": {},
+  "attributes": {
+    "done": {
+      "type": "boolean"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}
