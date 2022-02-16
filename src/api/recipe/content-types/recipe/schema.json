@@ -26,12 +26,6 @@
         "images"
       ]
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "recipes"
-    },
     "ingredients": {
       "type": "component",
       "repeatable": true,
@@ -41,6 +35,12 @@
       "type": "component",
       "repeatable": true,
       "component": "recipe.instruction"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "recipe"
     }
   }
 }
